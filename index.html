@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>رستوران تاپ فود</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- لینک فونت آیکون (FontAwesome) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <img href="./index.html" src="./assests/images/logo.png" />
+        </div>
+        <ul class="nav-links">
+          <li>بلاگ</li>
+          <li>منو</li>
+          <li>درباره ما</li>
+        </ul>
+        <div class="icons">
+          <!-- آیکون سبد خرید -->
+          <div class="cart-icon" onclick="toggleCart()">
+            <img
+              width="30"
+              height="30"
+              src="https://img.icons8.com/ios-glyphs/30/shopping-cart--v1.png"
+              alt="shopping-cart--v1"
+            />
+            <span id="cart-count">0</span>
+          </div>
+
+          <!-- سبد خرید -->
+          <div class="cart-dropdown">
+            <div class="cart-header">
+              <h3>سبد خرید</h3>
+              <button class="close-cart" onclick="toggleCart()">✖</button>
+            </div>
+            <ul id="cart-items" class="cart-items"></ul>
+            <div class="cart-footer">
+              <p>جمع کل: <span id="cart-total">۰</span> تومان</p>
+              <button class="checkout-btn">پرداخت</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div data-aos="zoom-in" class="hero-image">
+            <img src="./assests/images/food (1).png" alt="سایت تاپ فود" />
+          </div>
+          <div data-aos="zoom-in" class="hero-text">
+            <h2>تاپ فود</h2>
+            <p>خوشمزه ترین غذا ها با ما</p>
+            <button>ثبت سفارش</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- menu -->
+    <section data-aos="zoom-in-left" class="menu-container">
+      <h2 class="cal-menu-header">دسته بندی منو</h2>
+      <div class="grid-menu">
+        <div>
+          <img src="./assests/images/food (8).png" />
+          <p>پیتزا</p>
+        </div>
+        <div>
+          <img src="./assests/images/food pasta (1).png" />
+          <p>پاستا</p>
+        </div>
+        <div>
+          <img src="./assests/images/food (2).png" />
+          <p>نوشیدنی ها و دسر</p>
+        </div>
+
+        <div>
+          <img src="./assests/images/food pasta (2).png" />
+          <p>دریایی</p>
+        </div>
+        <div>
+          <img src="./assests/images/food (11).png" />
+          <p>استیک</p>
+        </div>
+        <div>
+          <img src="./assests/images/food (6).png" />
+          <p>لازانیا</p>
+        </div>
+      </div>
+    </section>
+    <!-- featured -->
+
+    <section class="featured">
+      <h2 data-aos="zoom-in-right">غذا های ویژه</h2>
+      <!--search-->
+      <div data-aos="zoom-in-right">
+        <input
+          type="text"
+          id="search-box"
+          placeholder="جستجوی محصول..."
+          class="search-input"
+        />
+      </div>
+      <div data-aos="fade-up" class="container-card">
+        <div class="featured-grid">
+          <div class="card" data-name="هات داگ " data-price="220000">
+            <img src="./assests/images/food new  (1).png" />
+            <p class="title">هات داگ</p>
+            <p class="price">۲۲۰٬۰۰۰ تومان</p>
+            <button class="add-to-cart">ثبت سفارش</button>
+          </div>
+          <div class="card" data-name="باربکیو " data-price="350000">
+            <img src="./assests/images/food (3).png" />
+            <p class="title">باربکیو</p>
+            <p class="price">۳۵۰٬۰۰۰ تومان</p>
+            <button class="add-to-cart">ثبت سفارش</button>
+          </div>
+          <div class="card" data-name="سوخاری " data-price="150000">
+            <img src="./assests/images/food (7).png" />
+            <p class="title">سوخاری</p>
+            <p class="price">۳۵۰,۰۰۰ تومان</p>
+            <button class="add-to-cart">ثبت سفارش</button>
+          </div>
+          <div class="card" data-name="پیتزا ایتالیایی" data-price="150000">
+            <img src="./assests/images/food (5).png" />
+            <p class="title">پیتزا ایتالیایی</p>
+            <p class="price">۲۲۰,۰۰۰ تومان</p>
+            <button class="add-to-cart">ثبت سفارش</button>
+          </div>
+          <div class="card" data-name=" سنتی" data-price="120000">
+            <img src="./assests/images/food new  (2).png" />
+            <p class="title">سنتی</p>
+            <p class="price">۴۵۰,۰۰۰ تومان</p>
+            <button class="add-to-cart">ثبت سفارش</button>
+          </div>
+          <div class="card" data-name=" برگرها" data-price="180000">
+            <img src="./assests/images/food (10).png" />
+            <p class="title">برگر ها</p>
+            <p class="price">۴۳۰,۰۰۰ تومان</p>
+            <button class="add-to-cart">ثبت سفارش</button>
+          </div>
+          <div class="card" data-name=" پاستا میگو" data-price="150000">
+            <img src="./assests/images/food pasta (2).png" />
+            <p class="title">پاستا میگو</p>
+            <p class="price">۳۶۰,۰۰۰ تومان</p>
+            <button class="add-to-cart">ثبت سفارش</button>
+          </div>
+          <div class="card" data-name="ماهی نروژی" data-price="110000">
+            <img src="./assests/images/fish1.png" />
+            <p class="title">ماهی نروژی</p>
+            <p class="price">۷۴۵,۰۰۰ تومان</p>
+            <button class="add-to-cart">ثبت سفارش</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--menu-board-->
+    <section class="menu-board">
+      <h2 data-aos="zoom-in-right" class="title">غذاهای ویژه تاپ فود</h2>
+      <div class="menu-grid">
+        <div class="menu-category">
+          <h3 class="category-title">رژیمی</h3>
+          <div data-aos="zoom-in-right" class="menu-item">
+            <img
+              src="./assests/images/food new  (3).png"
+              alt="Food 1"
+              class="food-image"
+            />
+            <div class="food-details">
+              <p class="food-name">کباب گریل</p>
+              <p class="food-description">
+                سایز بزرگ و متوسط از ۳۷۰٬۰۰۰ تا ۶۴۰٬۰۰۰ تومان
+              </p>
+            </div>
+          </div>
+          <div data-aos="zoom-in-right" class="menu-item">
+            <img
+              src="./assests/images/food new  (4).png"
+              alt="Food 2"
+              class="food-image"
+            />
+            <div class="food-details">
+              <p class="food-name">سالاد مخصوص با مرغ گریل</p>
+              <p class="food-description">
+                سایز بزرگ و متوسط از ۲۵۰٬۰۰۰ تا ۶۹۰٬۰۰۰ تومان
+              </p>
+            </div>
+          </div>
+          <div data-aos="zoom-in-right" class="menu-item">
+            <img
+              src="./assests/images/food new  (8).png"
+              alt="Food 3"
+              class="food-image"
+            />
+            <div class="food-details">
+              <p class="food-name">ماهیچه</p>
+              <p class="food-description">
+                سایز بزرگ و متوسط از ۵۲۰٬۰۰۰ تا ۷۴۰٬۰۰۰ تومان
+              </p>
+            </div>
+          </div>
+          <div data-aos="zoom-in-right" class="menu-item">
+            <img
+              src="./assests/images/food new  (10).png"
+              alt="Food 4"
+              class="food-image"
+            />
+            <div class="food-details">
+              <p class="food-name">بشقاب وگن</p>
+              <p class="food-description">
+                سایز بزرگ و متوسط از ۲۵۰٬۰۰۰ تا ۳۷۰٬۰۰۰ تومان
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="menu-category">
+          <h3 class="category-title">فرنگی</h3>
+          <div data-aos="zoom-in-left" class="menu-item">
+            <img
+              src="./assests/images/food new  (6).png"
+              alt="Food 5"
+              class="food-image"
+            />
+            <div class="food-details">
+              <p class="food-name">پاستا با مرغ هندی</p>
+              <p class="food-description">
+                سایز بزرگ و متوسط از ۳۷۰٬۰۰۰ تا ۵۲۰٬۰۰۰ تومان
+              </p>
+            </div>
+          </div>
+          <div data-aos="zoom-in-left" class="menu-item">
+            <img
+              src="./assests/images/food new  (5).png"
+              alt="Food 6"
+              class="food-image"
+            />
+            <div class="food-details">
+              <p class="food-name">برنج هندی</p>
+              <p class="food-description">
+                سایز بزرگ و متوسط از ۲۵۰٬۰۰۰ تا ۴۵۰٬۰۰۰ تومان
+              </p>
+            </div>
+          </div>
+          <div data-aos="zoom-in-left" class="menu-item">
+            <img
+              src="./assests/images/food new  (9).png"
+              alt="Food 7"
+              class="food-image"
+            />
+            <div class="food-details">
+              <p class="food-name">سوپ کیمچی</p>
+              <p class="food-description">
+                سایز بزرگ و متوسط از ۳۷۰٬۰۰۰ تا ۶۴۰٬۰۰۰ تومان
+              </p>
+            </div>
+          </div>
+          <div data-aos="zoom-in-left" class="menu-item">
+            <img
+              src="./assests/images/food new  (7).png"
+              alt="Food 8"
+              class="food-image"
+            />
+            <div class="food-details">
+              <p class="food-name">سوشی</p>
+              <p class="food-description">
+                سایز بزرگ و متوسط از ۴۵۰٬۰۰۰ تا ۷۴۰٬۰۰۰ تومان
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--comment-->
+    <div class="comments-section">
+      <h2>نظرات شما دوستان</h2>
+      <div class="comments-slider">
+        <div class="comment">
+          <p>
+            «غذاها فوق‌العاده خوش‌طعم بودن! مخصوصاً استیک گوشت. محیط هم خیلی
+            تمیز و دل‌نشین بود، قطعاً دوباره میام.»
+          </p>
+          <span>- محمدرضا کریمی</span>
+        </div>
+        <div class="comment">
+          <p>
+            «پیتزای مخصوصشون عالی بود، فقط کاش زمان تحویل بیرون‌بر کمی سریع‌تر
+            می‌بود. در کل کیفیتش حرف نداره.»
+          </p>
+          <span>- فاطمه مرادی</span>
+        </div>
+        <div class="comment">
+          <p>
+            «دکوراسیون مدرن و فضای آرومی داشت. قیمت‌ها نسبت به کیفیت غذا
+            منصفانه‌ست. از سالاد سزارشون خیلی خوشم اومد.»
+          </p>
+          <span>- نرگس احمدی</span>
+        </div>
+        <div class="comment">
+          <p>
+            «برخورد پرسنل بی‌نظیر بود، حس خونه بهم دست داد. دسرهاشون هم واقعاً
+            خوشمزه‌ست. پیشنهاد می‌کنم امتحان کنید.»
+          </p>
+          <span>- امیرحسین رضایی</span>
+        </div>
+        <div class="comment">
+          <p>
+            «یکی از بهترین رستوران‌هایی بود که تا حالا رفتم. همه‌چیز تازه و داغ
+            سرو شد. قطعاً جزو مشتری‌های دائمشون می‌شم.»
+          </p>
+          <span>- علیرضا شهبازی</span>
+        </div>
+      </div>
+    </div>
+    <!--footer-->
+    <footer class="footer">
+      <div class="footer-container">
+        <h2 class="footer-title">رستوران بین المللی تاپ فود</h2>
+        <p class="footer-text">ترکیبی عالی از طعم و کیفیت</p>
+        <div class="social-icons">
+          <a href="#" class="social-link"
+            ><i class="fab fa-instagram instagram-icon"></i
+          ></a>
+          <a href="#" class="social-link"
+            ><i class="fab fa-telegram-plane telegram-icon"></i
+          ></a>
+          <a href="#" class="social-link"
+            ><i class="fab fa-facebook-f facebook-icon"></i
+          ></a>
+          <a href="#" class="social-link"><i class="fab fa-x x-icon"></i></a>
+          <!-- آیکون X -->
+        </div>
+
+        <p class="copyright">
+          © 2025 تمامی حقوق محفوظ است | رستوران بین المللی تاپ فود
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simpleCart/3.0.5/simpleCart.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
