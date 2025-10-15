@@ -18,6 +18,7 @@ _(Replace the link above with your GitHub Pages or Vercel/Netlify URL once deplo
 - **CSS3** — custom responsive design
 - **JavaScript (ES6)** — dynamic cart and UI interactions
 - **AOS (Animate On Scroll)** — for smooth scroll-based animations
+- **Ability Search** — Searching the food menu
 
 ---
 
