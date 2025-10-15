@@ -7,7 +7,7 @@ This project includes smooth **AOS animations**, a dynamic **shopping cart**, an
 
 ## 🌐 Live Demo
 
-👉 [View Live Site]()  
+👉 [View Live Site](https://restaurant-top-food-site-js.vercel.app/)  
 _(Replace the link above with your GitHub Pages or Vercel/Netlify URL once deployed.)_
 
 ---
