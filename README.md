@@ -31,16 +31,6 @@ _(Replace the link above with your GitHub Pages or Vercel/Netlify URL once deplo
 
 ---
 
-## 📸 Screenshots
-
-| Home Page                            | Menu Section                          | Cart                                  |
-| ------------------------------------ | ------------------------------------- | ------------------------------------- |
-| ![Home](./assets/screen/Screen.home) | ![Menu](./assets/screen/Screen.home2) | ![Cart](./assets//screen/Screen.menu) |
-
-_(Add your screenshots in `assets/screenshots/` and update the paths.)_
-
----
-
 ## ⚙️ Installation & Usage
 
 Open `index.html` in your browser to view the site.
